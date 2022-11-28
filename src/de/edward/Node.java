@@ -1,5 +1,6 @@
 package de.edward;
 
+import java.util.Objects;
 import java.util.logging.Level;
 
 public class Node {
@@ -47,11 +48,32 @@ public class Node {
         this.value = value;
     }
 
+    // Prints out the value, the left child and the right child.
+    // Are either children not existent, print null.
     public void print(){
-
+        System.out.println(value + "\n");
+        /*
+        if (left != null) {
+            System.out.println(left + "\n");
+        } else {        // I have a lingering feeling that there's a better way of doing this.
+            System.out.println("null" + "\n");
+        }
+         */
+        System.out.println(Objects.requireNonNullElse(left, "null") + "\n");
+        System.out.println(Objects.requireNonNullElse(right, "null") + "\n");
     }
 
     public String get( String s ){
-
+        String ret = "";
+        if (s == null){
+            ret =  value;
+        } else if (s == "." && getLeft() != null){
+            getLeft(); // What the fuck am I supposed to do here
+        } else if (s == "_" && getRight() != null) {
+            getRight(); // This makes no bloody sense!!! TODO: Fix this!
+        } else {
+            ret = "#";
+        }
+        return ret;
     }
 }
