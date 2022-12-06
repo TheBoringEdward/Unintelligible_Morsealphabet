@@ -67,11 +67,11 @@ public class Node {
         String ret = "";
         if (s == null){
             ret =  value;
-        } else if (s == "." && getLeft() != null){
-            getLeft(); // What the fuck am I supposed to do here
-        } else if (s == "_" && getRight() != null) {
-            getRight(); // This makes no bloody sense!!! TODO: Fix this!
-        } else {
+        } else if (s.charAt(0) == '.' && left != null){
+            left.get(s.substring(1));
+        } else if (s.charAt(0) == '-' && right != null) {
+            right.get(s.substring(1));
+        } else { //TODO: Fix!!!!!
             ret = "#";
         }
         return ret;
