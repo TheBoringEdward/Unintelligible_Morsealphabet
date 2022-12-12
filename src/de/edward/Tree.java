@@ -16,13 +16,14 @@ public class Tree {
         StringBuilder plain = new StringBuilder();
         String extract = "";
 
-        while (0 != s.length()) {
+        while (s.length() != 0) {
 
-            while (s.charAt(0) != ' ') {
-                extract = extract + s.charAt(0);
+            while (s.charAt(0) != ' ' && s.length() != 0) {
+                System.out.println("one");
+                //extract = extract + s.charAt(0);
                 s = s.substring(1);
+                //plain.append(root.get(extract));
             }
-            plain.append(root.get(extract));
         }
 
         //get chars till space
