@@ -69,7 +69,7 @@ public class Node {
             ret =  value;
         } else if (s.charAt(0) == '.' && left != null){
             left.get(s.substring(1));
-        } else if (s.charAt(0) == '-' && right != null) {
+        } else if (s.charAt(0) == '_' && right != null) {
             right.get(s.substring(1));
         } else { //TODO: Fix!!!!!
             ret = "#";
