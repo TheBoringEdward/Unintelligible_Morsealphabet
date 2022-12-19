@@ -14,16 +14,23 @@ public class Tree {
 
     public String convert(String s) {
         StringBuilder plain = new StringBuilder();
-        String extract = "";
+        StringBuilder extract = new StringBuilder();
 
         while (s.length() != 0) {
 
-            while (s.charAt(0) != ' ' && s.length() != 0) {
-                System.out.println("one");
-                //extract = extract + s.charAt(0);
+            while (s.length() != 0 && s.charAt(0) != ' ') {
+
+                extract.append(s.charAt(0));
+                System.out.println("---one---");
                 s = s.substring(1);
-                //plain.append(root.get(extract));
+
+                System.out.println("Extract: " + extract);
+
             }
+            if (s.length() != 0) {
+                s = s.substring(1);
+            }
+            plain.append(root.get(extract.toString()));
         }
 
         //get chars till space

@@ -64,8 +64,11 @@ public class Node {
     }
 
     public String get( String s ){
+        System.out.println("About to print 's'.");
+        System.out.println(s);
+        System.out.println("'s' has been printed.");
         String ret = "";
-        if (s == null){
+        if (s.length() == 0){
             ret =  value;
         } else if (s.charAt(0) == '.' && left != null){
             left.get(s.substring(1));

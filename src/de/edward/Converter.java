@@ -39,7 +39,7 @@ public class Converter extends JFrame{
         JScrollPane JSP_plain = new JScrollPane(JTA_plain);
 
         // set up the buttons, each with an action listener
-        JB_convert = new JButton("convert");
+        JB_convert = new JButton("Convert");
         JB_convert.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 String text = JTA_morse.getText();
@@ -62,7 +62,7 @@ public class Converter extends JFrame{
         try{
             database = new RandomAccessFile("International_Morse_Code.dat","rw");
         }catch( FileNotFoundException fnf ){
-            System.out.println("\n File not found.\n\n");
+            System.out.println("\n File could not found.\n\n");
             JTA_morse.setText("Problem: I cannot find the input file.");
         }
 
