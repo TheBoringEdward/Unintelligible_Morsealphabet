@@ -42,7 +42,7 @@ public class Converter extends JFrame{
         JB_convert = new JButton("Convert");
         JB_convert.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                String text = JTA_morse.getText();
+                String text = JTA_morse.getText(); // over here we need to make an option for converting the plain to morse
                 JTA_plain.setText( my_tree.convert(text) );
                 JTA_morse.setText("");
             }
