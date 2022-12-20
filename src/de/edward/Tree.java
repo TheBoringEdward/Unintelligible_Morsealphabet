@@ -46,6 +46,7 @@ public class Tree {
         //give root return to plain
         //if finished return plain
 
+        System.out.println("No new letters.\n");
         return plain.toString();
     }
 
