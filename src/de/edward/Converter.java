@@ -118,8 +118,9 @@ public class Converter extends JFrame{
         Converter app = new Converter();
         app.setSize(600,600);
         app.setResizable(false);
-        app.setTitle("Morse Converter v1.0 by KW");
+        app.setTitle("Morse Converter v1.0 by KW with the help of TBE");
         app.setVisible(true);
+        System.out.println("\n ======= This code has been provided by TheBoringEdward with the help of some fellows =======\n\n");
     }
 
 }
