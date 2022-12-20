@@ -21,7 +21,7 @@ public class Tree {
             while (s.length() != 0 && s.charAt(0) != ' ') {
 
                 extract.append(s.charAt(0));
-                System.out.println("---one---");
+                System.out.println("---next char---");
                 s = s.substring(1);
 
                 System.out.println("Extract: " + extract);
@@ -31,6 +31,7 @@ public class Tree {
                 s = s.substring(1);
             }
             plain.append(root.get(extract.toString()));
+            extract = new StringBuilder();
         }
 
         //get chars till space

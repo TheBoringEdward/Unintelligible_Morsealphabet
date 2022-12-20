@@ -28,7 +28,7 @@ public class Converter extends JFrame{
 
         // set up the text areas
         // The JTextArea needs a surrounding JScrollPane for scrolling.
-        JTA_morse = new JTextArea("");
+        JTA_morse = new JTextArea("_._ ._ _ ._ ... _ ._. ___ .__. .... .");
         JTA_morse.setLineWrap(true);
         JTA_morse.setWrapStyleWord(true);
         JScrollPane JSP_morse = new JScrollPane(JTA_morse);

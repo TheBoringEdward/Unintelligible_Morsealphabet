@@ -71,12 +71,16 @@ public class Node {
         if (s.length() == 0){
             ret =  value;
         } else if (s.charAt(0) == '.' && left != null){
-            left.get(s.substring(1));
+            return left.get(s.substring(1));
         } else if (s.charAt(0) == '_' && right != null) {
-            right.get(s.substring(1));
+            return right.get(s.substring(1));
+        } else if (s.charAt(0) == '-' && right != null) { // for the use of dashes and underscores alike
+            return right.get(s.substring(1));
         } else { //TODO: Fix!!!!!
             ret = "#";
+            System.out.println("\nInvalid character! Watch your input!");
         }
+        System.out.println("\n" + ret + " will be printed.\nNext letter...\n");
         return ret;
     }
 }
