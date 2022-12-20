@@ -77,6 +77,7 @@ public class Converter extends JFrame{
             }
             if( entry != null ){
                 Node n = my_tree.getRoot();
+
                 // The Node n points currently to the tree's root. It will shift to
                 // the Node which shall contain the newly read String.
 

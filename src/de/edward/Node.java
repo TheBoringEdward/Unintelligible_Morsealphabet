@@ -63,7 +63,7 @@ public class Node {
         System.out.println(Objects.requireNonNullElse(right, "null") + "\n");
     }
 
-    public String get( String s ){
+    public String get( String s ){ //TODO: Do the reverse.
         System.out.println("About to print 's'.");
         System.out.println(s);
         System.out.println("'s' has been printed.");
@@ -76,7 +76,7 @@ public class Node {
             return right.get(s.substring(1));
         } else if (s.charAt(0) == '-' && right != null) { // for the use of dashes and underscores alike
             return right.get(s.substring(1));
-        } else { //TODO: Fix!!!!!
+        } else {
             ret = "#";
             System.out.println("Invalid character! Watch your input!\n");
         }
