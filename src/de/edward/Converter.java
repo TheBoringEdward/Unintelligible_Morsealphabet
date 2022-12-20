@@ -28,7 +28,7 @@ public class Converter extends JFrame{
 
         // set up the text areas
         // The JTextArea needs a surrounding JScrollPane for scrolling.
-        JTA_morse = new JTextArea("_._ ._ _ ._ ... _ ._. ___ .__. .... .");
+        JTA_morse = new JTextArea("_._ ._ _ ._ ... _ ._. ___ .__. .... ."); // KATASTROPHE
         JTA_morse.setLineWrap(true);
         JTA_morse.setWrapStyleWord(true);
         JScrollPane JSP_morse = new JScrollPane(JTA_morse);
@@ -42,6 +42,7 @@ public class Converter extends JFrame{
         JB_convert = new JButton("Convert");
         JB_convert.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                System.out.println("About to convert plain text to morse code.\n");
                 String text = JTA_morse.getText(); // over here we need to make an option for converting the plain to morse
                 JTA_plain.setText( my_tree.convert(text) );
                 JTA_morse.setText("");
