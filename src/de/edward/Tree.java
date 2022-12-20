@@ -23,7 +23,7 @@ public class Tree {
                 extract.append(s.charAt(0));
                 System.out.println("---next char---");
                 s = s.substring(1);
-
+                //change
                 System.out.println("Extract: " + extract);
 
             }
