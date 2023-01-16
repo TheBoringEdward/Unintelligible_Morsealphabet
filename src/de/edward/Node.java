@@ -63,6 +63,7 @@ public class Node {
         System.out.println(Objects.requireNonNullElse(right, "null") + "\n");
     }
 
+    //TODO: Add comment on the functionality, intentions and limits.
     public String get( String s ){ //TODO: Do the reverse.
         System.out.println("About to print 's'.");
         System.out.println(s);
@@ -76,6 +77,27 @@ public class Node {
             return right.get(s.substring(1));
         } else if (s.charAt(0) == '-' && right != null) { // for the use of dashes and underscores alike
             return right.get(s.substring(1));
+        } else {
+            ret = "#";
+            System.out.println("Invalid character! Watch your input!\n");
+        }
+        System.out.println("\n'" + ret + "' will be printed.\nNext letter...\n");
+        return ret;
+    }
+
+    public String getLetter( String l ){ //TODO: Do the reverse.
+        System.out.println("About to print 'l'.");
+        System.out.println(l);
+        System.out.println("'l' has been printed.");
+        String ret = "";
+        if (l.length() == 0){
+            ret =  value;
+        } else if (l.charAt(0) == '.' && left != null){
+            return left.get(l.substring(1));
+        } else if (l.charAt(0) == '_' && right != null) {
+            return right.get(l.substring(1));
+        } else if (l.charAt(0) == '-' && right != null) { // for the use of dashes and underscores alike
+            return right.get(l.substring(1));
         } else {
             ret = "#";
             System.out.println("Invalid character! Watch your input!\n");

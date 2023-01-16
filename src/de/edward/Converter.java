@@ -8,6 +8,8 @@ package de.edward;
 
 // Klaus Wiele November 2022
 
+//TODO: Document the entire code.
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.Scanner;
