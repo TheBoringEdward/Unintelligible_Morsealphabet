@@ -1,0 +1,4 @@
+This documentation is supposed to explain how the program, the classes,
+and its containing methods are to be used. The explanations should only
+be broad enough to be understood by any users, without giving away how
+process of the method itself.
